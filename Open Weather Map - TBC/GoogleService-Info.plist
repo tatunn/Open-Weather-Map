@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>419533121813-ibu5u0gmpf6pq7mltdig6758s1ffa843.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.419533121813-ibu5u0gmpf6pq7mltdig6758s1ffa843</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDc7cSCzhtsQvqKbPZkhEYgTuYWwj3SzPw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>419533121813</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.nalya.Open-Weather-Map---TBC</string>
+	<key>PROJECT_ID</key>
+	<string>open-weather-map-tbc</string>
+	<key>STORAGE_BUCKET</key>
+	<string>open-weather-map-tbc.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:419533121813:ios:6a1f277152ce71050c211c</string>
+	<key>DATABASE_URL</key>
+	<string>https://open-weather-map-tbc.firebaseio.com</string>
+</dict>
+</plist>
