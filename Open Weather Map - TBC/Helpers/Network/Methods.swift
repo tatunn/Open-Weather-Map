@@ -15,9 +15,9 @@ enum Methods {
     private var urlPath: String {
         switch self {
         case .weather(let lat, let lon):
-            return "/weather?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)"
+            return "/weather?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)&units=metric"
         case .forecast(let lat, let lon):
-            return "/forecast?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)"
+            return "/forecast?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)&units=metric"
         }
     }
     

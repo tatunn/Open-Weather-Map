@@ -34,7 +34,6 @@
 		E1BA0AEF238D032A009DD241 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AEE238D032A009DD241 /* Types.swift */; };
 		E1BA0AF2238D0390009DD241 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF1238D0390009DD241 /* UIView.swift */; };
 		E1BA0AFA238D0526009DD241 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF8238D0526009DD241 /* TodayViewController.swift */; };
-		E1BA0AFB238D0526009DD241 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AF9238D0526009DD241 /* TodayViewController.xib */; };
 		E1BA0AFE238D0548009DD241 /* ForeCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AFC238D0548009DD241 /* ForeCastViewController.swift */; };
 		E1BA0AFF238D0548009DD241 /* ForeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AFD238D0548009DD241 /* ForeCastViewController.xib */; };
 		E1BA0B02238D0CEE009DD241 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0B01238D0CEE009DD241 /* AppNavigationController.swift */; };
@@ -77,7 +76,6 @@
 		E1BA0AEE238D032A009DD241 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		E1BA0AF1238D0390009DD241 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E1BA0AF8238D0526009DD241 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		E1BA0AF9238D0526009DD241 /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
 		E1BA0AFC238D0548009DD241 /* ForeCastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastViewController.swift; sourceTree = "<group>"; };
 		E1BA0AFD238D0548009DD241 /* ForeCastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForeCastViewController.xib; sourceTree = "<group>"; };
 		E1BA0B01238D0CEE009DD241 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 				E1820E56238DA50A004CDA0C /* Cells */,
 				E1820E51238D2A77004CDA0C /* Models */,
 				E1BA0AF8238D0526009DD241 /* TodayViewController.swift */,
-				E1BA0AF9238D0526009DD241 /* TodayViewController.xib */,
 				E1820E4F238D2993004CDA0C /* TodayViewModel.swift */,
 			);
 			path = Today;
@@ -358,7 +355,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1BA0AFB238D0526009DD241 /* TodayViewController.xib in Resources */,
 				E1BA0AFF238D0548009DD241 /* ForeCastViewController.xib in Resources */,
 				E1820E4C238D1D81004CDA0C /* LocationPermissionViewController.xib in Resources */,
 				E1BA0AD8238CF491009DD241 /* LaunchScreen.storyboard in Resources */,

@@ -20,7 +20,9 @@ class TodayViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.separatorStyle = .none
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
         tableView.register(names: ButtonCell.self, WeatherMainCell.self, WeatherHeaderCell.self)
         
         viewModel.loader.bindAndFire { [weak self] in
@@ -42,7 +44,12 @@ class TodayViewController: UITableViewController {
         guard let item = item else {
             return
         }
-        self.title = item.name
+        self.title = "Today"
+        
+        let header = WeatherHeaderCellDataModel(title: item.prettyName, subTitle: item.prettyDescr, icon: Api.imageUrl(path: item.prettyIcon))
+        let main = WeatherMainCellDataModel(humidity: item.prettyHumidity, rain: item.prettyRain, pressure: item.prettyPressure, speed: item.prettySpeed, country: item.prettyCountry)
+        let button = ButtonCellDataModel(title: "Share")
+        dataProviders = [header, main, button]
     }
 }
 

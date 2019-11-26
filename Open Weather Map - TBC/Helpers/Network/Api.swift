@@ -25,7 +25,7 @@ extension ServerInfo {
 class Api: ServerInfo {
     
     static var appid: String {
-        "2dd8af9d828077365d3472fdf5b5f451"
+        "b6907d289e10d714a6e88b30761fae22"
     }
     
     //lat=35&lon=139&
@@ -35,7 +35,7 @@ class Api: ServerInfo {
     }
     
     static var host: String {
-        "samples.openweathermap.org"
+        "openweathermap.org"
     }
     
     static var path: String {
@@ -43,6 +43,6 @@ class Api: ServerInfo {
     }
     
     static func imageUrl(path: String) -> URL? {
-        URL(string: "http://openweathermap.org/img/wn/" + path + ".png")
+        URL(string: "https://openweathermap.org/img/wn/" + path + ".png")
     }
 }
