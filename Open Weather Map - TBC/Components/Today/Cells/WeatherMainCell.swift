@@ -8,17 +8,44 @@
 
 import UIKit
 
-class WeatherMainCell: UITableViewCell {
+class WeatherMainCell: UITableViewCell, AppTableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var rainLabel: UILabel!
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    
+    
+    func configure(with item: AppCellDataProvider) {
+        guard let model = item as? WeatherMainCellDataModel else {
+            return
+        }
+        humidityLabel.text = model.humidity
+        rainLabel.text = model.rain
+        pressureLabel.text = model.pressure
+        speedLabel.text = model.speed
+        countryLabel.text = model.country
     }
     
+}
+
+class WeatherMainCellDataModel: AppCellDataProvider {
+    let humidity: String
+    let rain: String
+    let pressure: String
+    let speed: String
+    let country: String
+    
+    init(humidity: String, rain: String, pressure: String, speed: String, country: String) {
+        self.humidity = humidity
+        self.rain = rain
+        self.pressure = pressure
+        self.speed = speed
+        self.country = country
+    }
+    
+    var identifier: String {
+        return WeatherMainCell.className
+    }
 }

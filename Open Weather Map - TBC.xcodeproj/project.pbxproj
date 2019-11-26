@@ -22,13 +22,15 @@
 		E1820E62238DA597004CDA0C /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1820E60238DA597004CDA0C /* ButtonCell.xib */; };
 		E1820E64238DA628004CDA0C /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E63238DA628004CDA0C /* Object.swift */; };
 		E1820E66238DA68C004CDA0C /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E65238DA68C004CDA0C /* TableView.swift */; };
+		E1820E68238DAA44004CDA0C /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E67238DAA44004CDA0C /* AppTableViewCell.swift */; };
+		E1820E6C238DAE54004CDA0C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E6B238DAE54004CDA0C /* UIImageView.swift */; };
 		E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0ACB238CF490009DD241 /* AppDelegate.swift */; };
 		E1BA0AD3238CF490009DD241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD1238CF490009DD241 /* Main.storyboard */; };
 		E1BA0AD5238CF491009DD241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD4238CF491009DD241 /* Assets.xcassets */; };
 		E1BA0AD8238CF491009DD241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD6238CF491009DD241 /* LaunchScreen.storyboard */; };
 		E1BA0AE0238CFEC0009DD241 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0ADF238CFEC0009DD241 /* GoogleService-Info.plist */; };
 		E1BA0AE7238D01F9009DD241 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AE6238D01F9009DD241 /* MainTabBarViewController.swift */; };
-		E1BA0AED238D02D7009DD241 /* UIviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AEC238D02D7009DD241 /* UIviewController.swift */; };
+		E1BA0AED238D02D7009DD241 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AEC238D02D7009DD241 /* UIViewController.swift */; };
 		E1BA0AEF238D032A009DD241 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AEE238D032A009DD241 /* Types.swift */; };
 		E1BA0AF2238D0390009DD241 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF1238D0390009DD241 /* UIView.swift */; };
 		E1BA0AFA238D0526009DD241 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF8238D0526009DD241 /* TodayViewController.swift */; };
@@ -61,6 +63,8 @@
 		E1820E60238DA597004CDA0C /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		E1820E63238DA628004CDA0C /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		E1820E65238DA68C004CDA0C /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		E1820E67238DAA44004CDA0C /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		E1820E6B238DAE54004CDA0C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E1BA0AC8238CF490009DD241 /* Open Weather Map - TBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Weather Map - TBC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA0ACB238CF490009DD241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BA0AD2238CF490009DD241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		E1BA0AD9238CF491009DD241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1BA0ADF238CFEC0009DD241 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1BA0AE6238D01F9009DD241 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		E1BA0AEC238D02D7009DD241 /* UIviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIviewController.swift; sourceTree = "<group>"; };
+		E1BA0AEC238D02D7009DD241 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		E1BA0AEE238D032A009DD241 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		E1BA0AF1238D0390009DD241 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E1BA0AF8238D0526009DD241 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				E1BA0AEB238D02C9009DD241 /* Extensions */,
 				E1BA0AEE238D032A009DD241 /* Types.swift */,
 				E1820E4D238D2470004CDA0C /* Dynamics.swift */,
+				E1820E67238DAA44004CDA0C /* AppTableViewCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -235,10 +240,11 @@
 		E1BA0AEB238D02C9009DD241 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E1BA0AEC238D02D7009DD241 /* UIviewController.swift */,
+				E1BA0AEC238D02D7009DD241 /* UIViewController.swift */,
 				E1BA0AF1238D0390009DD241 /* UIView.swift */,
 				E1820E63238DA628004CDA0C /* Object.swift */,
 				E1820E65238DA68C004CDA0C /* TableView.swift */,
+				E1820E6B238DAE54004CDA0C /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,12 +425,14 @@
 				E1BA0B02238D0CEE009DD241 /* AppNavigationController.swift in Sources */,
 				E1BA0B06238D124B009DD241 /* RadioAccessTechnology.swift in Sources */,
 				E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */,
+				E1820E68238DAA44004CDA0C /* AppTableViewCell.swift in Sources */,
+				E1820E6C238DAE54004CDA0C /* UIImageView.swift in Sources */,
 				E1BA0B0E238D196D009DD241 /* AppLocationManager.swift in Sources */,
 				E1820E64238DA628004CDA0C /* Object.swift in Sources */,
 				E1820E4B238D1D81004CDA0C /* LocationPermissionViewController.swift in Sources */,
 				E1BA0AFA238D0526009DD241 /* TodayViewController.swift in Sources */,
 				E1820E59238DA54E004CDA0C /* WeatherHeaderCell.swift in Sources */,
-				E1BA0AED238D02D7009DD241 /* UIviewController.swift in Sources */,
+				E1BA0AED238D02D7009DD241 /* UIViewController.swift in Sources */,
 				E1820E55238D3482004CDA0C /* ForeCastViewModel.swift in Sources */,
 				E1820E66238DA68C004CDA0C /* TableView.swift in Sources */,
 				E1BA0AF2238D0390009DD241 /* UIView.swift in Sources */,

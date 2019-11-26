@@ -8,19 +8,35 @@
 
 import UIKit
 
-class WeatherHeaderCell: UITableViewCell {
-
-    static let nib = UINib(nibName: className, bundle: nil)
+class WeatherHeaderCell: UITableViewCell, AppTableViewCell {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
+    func configure(with item: AppCellDataProvider) {
+        guard let model = item as? WeatherHeaderCellDataModel else {
+            return
+        }
+        titleLabel.text = model.title
+        subTitleLabel.text = model.subTitle
+        avatar.downloadImage(with: model.icon)
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+class WeatherHeaderCellDataModel: AppCellDataProvider {
+    
+    let icon: URL?
+    let title: String
+    let subTitle: String
+    
+    init(title: String, subTitle: String, icon: URL?) {
+        self.title = title
+        self.subTitle = subTitle
+        self.icon = icon
     }
     
+    var identifier: String {
+        WeatherHeaderCell.className
+    }
 }

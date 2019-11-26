@@ -4,6 +4,7 @@
 target 'Open Weather Map - TBC' do
   use_frameworks!
 
+  pod 'SDWebImage' 
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
 

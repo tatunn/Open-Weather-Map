@@ -8,17 +8,27 @@
 
 import UIKit
 
-class ButtonCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class ButtonCell: UITableViewCell, AppTableViewCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    func configure(with item: AppCellDataProvider) {
+        guard let model = item as? ButtonCellDataModel else {
+            return
+        }
+        titleLabel.text = model.title
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+class ButtonCellDataModel: AppCellDataProvider {
+    
+    let title: String
+    
+    init(title: String) {
+        self.title = title
     }
     
+    var identifier: String {
+        return ButtonCell.className
+    }
 }
