@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherHeaderCell: UITableViewCell {
 
+    static let nib = UINib(nibName: className, bundle: nil)
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

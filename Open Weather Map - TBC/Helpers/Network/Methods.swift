@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+enum Methods {
+    case weather(lat: Double, long: Double)
+    case forecast(lat: Double, long: Double)
+    
+    private var urlPath: String {
+        switch self {
+        case .weather(let lat, let lon):
+            return "/weather?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)"
+        case .forecast(let lat, let lon):
+            return "/forecast?lat=\(lat)&lon=\(lon)&appid=\(Api.appid)"
+        }
+    }
+    
+    var url: URL? {
+        return URL(string: Api.baseUrl + urlPath)
+    }
+}

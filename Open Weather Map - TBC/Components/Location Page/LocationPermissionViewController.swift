@@ -9,22 +9,26 @@
 import UIKit
 
 class LocationPermissionViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBAction func setingsAction() {
+        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
     }
 
+}
 
-    /*
-    // MARK: - Navigation
+extension LocationPermissionViewController {
+    static func present() {
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let me = LocationPermissionViewController()
+        
+        window.rootViewController = me
+        
+        let options: UIView.AnimationOptions = .transitionCurlDown
+        let duration: TimeInterval = 0.3
+
+        UIView.transition(with: window, duration: duration, options: options, animations: nil, completion: nil)
     }
-    */
-
 }

@@ -6,4 +6,9 @@
 //  Copyright © 2019 Nikoloz TatunaSvili. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class AppNavigationController: UINavigationController {
+    
+}
+

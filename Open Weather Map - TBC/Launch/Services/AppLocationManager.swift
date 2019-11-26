@@ -10,32 +10,35 @@ import UIKit
 import CoreLocation
 
 class AppLocationManager: NSObject, UIApplicationDelegate {
-    
-    let manager = CLLocationManager()
-    
+        
+    @discardableResult
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        
+        permision()
         
         return true
     }
     
+    let notifyLocation: Dynamic<CLLocationCoordinate2D?> = Dynamic(nil)
+    
     var lastKnownLocation: CLLocationCoordinate2D? {
-        set{
-            notifyLocation.value = newValue
+        set {
+            if notifyLocation.value != newValue {
+                notifyLocation.value = newValue
+            }
         }
         get{
-            self.permision()
-            return notifyLocation.value
+            notifyLocation.value
         }
-        
     }
     
-    private let manager: CLLocationManager = CLLocationManager()
+    private let manager = CLLocationManager()
     
-    private override init() {
+    override init() {
         super.init()
         manager.delegate = self
-        manager.distanceFilter = kCLDistanceFilterNone
-        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        manager.distanceFilter = 100
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
     func startLocationUpdate() {
@@ -45,45 +48,45 @@ class AppLocationManager: NSObject, UIApplicationDelegate {
         }
     }
     
-    func startAlwaysTrack() {
-        if CLLocationManager.locationServicesEnabled() {
-            manager.startMonitoringSignificantLocationChanges()
-        }
-        if #available(iOS 11.0, *) {
-            manager.showsBackgroundLocationIndicator = true
-        }
-        manager.allowsBackgroundLocationUpdates = true
-        manager.pausesLocationUpdatesAutomatically = false
-    }
-    
-    func stopAlwaysTrack() {
-        if CLLocationManager.locationServicesEnabled() {
-            manager.stopMonitoringSignificantLocationChanges()
-        }
-        manager.allowsBackgroundLocationUpdates = false
-        manager.pausesLocationUpdatesAutomatically = true
-    }
-    
     func stopLocationUpdate() {
         if CLLocationManager.locationServicesEnabled() {
             manager.stopUpdatingLocation()
         }
     }
     
+    deinit {
+        stopLocationUpdate()
+    }
+    
     func permision() {
         switch CLLocationManager.authorizationStatus() {
         case .restricted, .notDetermined:
-            manager.requestAlwaysAuthorization()
-        case .denied:
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
-                self.popUp()
-            }
-            break
+            manager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
-            //using
-            break
+            startLocationUpdate()
+        case .denied:
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+            LocationPermissionViewController.present()
+        }
+        break
         @unknown default:
             break
         }
+    }
+}
+
+extension AppLocationManager: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        self.lastKnownLocation = locations.last?.coordinate
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        permision()
+    }
+}
+
+extension CLLocationCoordinate2D: Equatable {
+    public static func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }
 }

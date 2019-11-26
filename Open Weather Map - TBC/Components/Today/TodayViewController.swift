@@ -8,23 +8,44 @@
 
 import UIKit
 
-class TodayViewController: UIViewController {
+class TodayViewController: UITableViewController {
 
+    private let viewModel = TodayViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.register(names: ButtonCell.self, WeatherMainCell.self, WeatherHeaderCell.self)
+        
+        viewModel.loader.bindAndFire { [weak self] in
+            if $0 { self?.showLoader() } else { self?.hideLoader() }
+        }
+        
+        viewModel.error.bindAndFire { [weak self] in
+            if let error = $0 { self?.notifyError(error) }
+        }
+        
+        viewModel.entity.bindAndFire { [weak self] in
+            self?.setup(with: $0)
+        }
+        
+        viewModel.fetchData()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    private func setup(with item: WeatherEntity?) {
+        guard let item = item else {
+            return
+        }
+        self.title = item.name
     }
-    */
+}
 
+extension TodayViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
 }

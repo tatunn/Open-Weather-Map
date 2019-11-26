@@ -11,14 +11,24 @@ import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-  
+    
     var window: UIWindow?
+    
+    private(set) lazy var appLocationManeger = AppLocationManager()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         FirebaseApp.configure()
+
+        _ = appLocationManeger.application(application, didFinishLaunchingWithOptions: launchOptions)
+
         return true
     }
-
 }
 
+
+extension AppDelegate {
+    static var delegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+}
