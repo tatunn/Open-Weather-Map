@@ -12,7 +12,7 @@ class TodayViewController: UITableViewController {
 
     private let viewModel = TodayViewModel()
     
-    fileprivate var dataProviders: [AppCellDataProvider] = [] {
+    fileprivate var dataProviders: AppCellDataProviders = [] {
         didSet {
             self.tableView.reloadData()
         }

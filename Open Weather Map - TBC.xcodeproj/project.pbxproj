@@ -24,6 +24,11 @@
 		E1820E66238DA68C004CDA0C /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E65238DA68C004CDA0C /* TableView.swift */; };
 		E1820E68238DAA44004CDA0C /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E67238DAA44004CDA0C /* AppTableViewCell.swift */; };
 		E1820E6C238DAE54004CDA0C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E6B238DAE54004CDA0C /* UIImageView.swift */; };
+		E1820E7123923589004CDA0C /* ForeCastItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E6F23923589004CDA0C /* ForeCastItemCell.swift */; };
+		E1820E7223923589004CDA0C /* ForeCastItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1820E7023923589004CDA0C /* ForeCastItemCell.xib */; };
+		E1820E74239239C5004CDA0C /* ForeCastTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E73239239C5004CDA0C /* ForeCastTableDataSource.swift */; };
+		E1820E7623923AC8004CDA0C /* ForeCastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7523923AC8004CDA0C /* ForeCastEntity.swift */; };
+		E1820E7823923C7A004CDA0C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7723923C7A004CDA0C /* Date.swift */; };
 		E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0ACB238CF490009DD241 /* AppDelegate.swift */; };
 		E1BA0AD3238CF490009DD241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD1238CF490009DD241 /* Main.storyboard */; };
 		E1BA0AD5238CF491009DD241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD4238CF491009DD241 /* Assets.xcassets */; };
@@ -35,7 +40,6 @@
 		E1BA0AF2238D0390009DD241 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF1238D0390009DD241 /* UIView.swift */; };
 		E1BA0AFA238D0526009DD241 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AF8238D0526009DD241 /* TodayViewController.swift */; };
 		E1BA0AFE238D0548009DD241 /* ForeCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0AFC238D0548009DD241 /* ForeCastViewController.swift */; };
-		E1BA0AFF238D0548009DD241 /* ForeCastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AFD238D0548009DD241 /* ForeCastViewController.xib */; };
 		E1BA0B02238D0CEE009DD241 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0B01238D0CEE009DD241 /* AppNavigationController.swift */; };
 		E1BA0B04238D1214009DD241 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0B03238D1214009DD241 /* Reachability.swift */; };
 		E1BA0B06238D124B009DD241 /* RadioAccessTechnology.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0B05238D124B009DD241 /* RadioAccessTechnology.swift */; };
@@ -64,6 +68,11 @@
 		E1820E65238DA68C004CDA0C /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		E1820E67238DAA44004CDA0C /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		E1820E6B238DAE54004CDA0C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		E1820E6F23923589004CDA0C /* ForeCastItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastItemCell.swift; sourceTree = "<group>"; };
+		E1820E7023923589004CDA0C /* ForeCastItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForeCastItemCell.xib; sourceTree = "<group>"; };
+		E1820E73239239C5004CDA0C /* ForeCastTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastTableDataSource.swift; sourceTree = "<group>"; };
+		E1820E7523923AC8004CDA0C /* ForeCastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastEntity.swift; sourceTree = "<group>"; };
+		E1820E7723923C7A004CDA0C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E1BA0AC8238CF490009DD241 /* Open Weather Map - TBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Weather Map - TBC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA0ACB238CF490009DD241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BA0AD2238CF490009DD241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +86,6 @@
 		E1BA0AF1238D0390009DD241 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E1BA0AF8238D0526009DD241 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		E1BA0AFC238D0548009DD241 /* ForeCastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastViewController.swift; sourceTree = "<group>"; };
-		E1BA0AFD238D0548009DD241 /* ForeCastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForeCastViewController.xib; sourceTree = "<group>"; };
 		E1BA0B01238D0CEE009DD241 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		E1BA0B03238D1214009DD241 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		E1BA0B05238D124B009DD241 /* RadioAccessTechnology.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioAccessTechnology.swift; sourceTree = "<group>"; };
@@ -143,6 +151,24 @@
 				E1820E60238DA597004CDA0C /* ButtonCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		E1820E6D23923544004CDA0C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E1820E6F23923589004CDA0C /* ForeCastItemCell.swift */,
+				E1820E7023923589004CDA0C /* ForeCastItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E1820E6E23923550004CDA0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1820E73239239C5004CDA0C /* ForeCastTableDataSource.swift */,
+				E1820E7523923AC8004CDA0C /* ForeCastEntity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E1BA0ABF238CF490009DD241 = {
@@ -243,6 +269,7 @@
 				E1820E63238DA628004CDA0C /* Object.swift */,
 				E1820E65238DA68C004CDA0C /* TableView.swift */,
 				E1820E6B238DAE54004CDA0C /* UIImageView.swift */,
+				E1820E7723923C7A004CDA0C /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,8 +288,9 @@
 		E1BA0AF4238D0421009DD241 /* ForeCast */ = {
 			isa = PBXGroup;
 			children = (
+				E1820E6D23923544004CDA0C /* Cells */,
+				E1820E6E23923550004CDA0C /* Models */,
 				E1BA0AFC238D0548009DD241 /* ForeCastViewController.swift */,
-				E1BA0AFD238D0548009DD241 /* ForeCastViewController.xib */,
 				E1820E54238D3482004CDA0C /* ForeCastViewModel.swift */,
 			);
 			path = ForeCast;
@@ -355,7 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1BA0AFF238D0548009DD241 /* ForeCastViewController.xib in Resources */,
+				E1820E7223923589004CDA0C /* ForeCastItemCell.xib in Resources */,
 				E1820E4C238D1D81004CDA0C /* LocationPermissionViewController.xib in Resources */,
 				E1BA0AD8238CF491009DD241 /* LaunchScreen.storyboard in Resources */,
 				E1BA0AE0238CFEC0009DD241 /* GoogleService-Info.plist in Resources */,
@@ -417,15 +445,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1820E4E238D2470004CDA0C /* Dynamics.swift in Sources */,
+				E1820E7123923589004CDA0C /* ForeCastItemCell.swift in Sources */,
 				E1820E53238D2A81004CDA0C /* Weather.swift in Sources */,
 				E1BA0B02238D0CEE009DD241 /* AppNavigationController.swift in Sources */,
 				E1BA0B06238D124B009DD241 /* RadioAccessTechnology.swift in Sources */,
+				E1820E7823923C7A004CDA0C /* Date.swift in Sources */,
 				E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */,
 				E1820E68238DAA44004CDA0C /* AppTableViewCell.swift in Sources */,
 				E1820E6C238DAE54004CDA0C /* UIImageView.swift in Sources */,
 				E1BA0B0E238D196D009DD241 /* AppLocationManager.swift in Sources */,
 				E1820E64238DA628004CDA0C /* Object.swift in Sources */,
 				E1820E4B238D1D81004CDA0C /* LocationPermissionViewController.swift in Sources */,
+				E1820E74239239C5004CDA0C /* ForeCastTableDataSource.swift in Sources */,
 				E1BA0AFA238D0526009DD241 /* TodayViewController.swift in Sources */,
 				E1820E59238DA54E004CDA0C /* WeatherHeaderCell.swift in Sources */,
 				E1BA0AED238D02D7009DD241 /* UIViewController.swift in Sources */,
@@ -433,6 +464,7 @@
 				E1820E66238DA68C004CDA0C /* TableView.swift in Sources */,
 				E1BA0AF2238D0390009DD241 /* UIView.swift in Sources */,
 				E1BA0B08238D1273009DD241 /* Api.swift in Sources */,
+				E1820E7623923AC8004CDA0C /* ForeCastEntity.swift in Sources */,
 				E1820E5D238DA573004CDA0C /* WeatherMainCell.swift in Sources */,
 				E1BA0AE7238D01F9009DD241 /* MainTabBarViewController.swift in Sources */,
 				E1BA0AFE238D0548009DD241 /* ForeCastViewController.swift in Sources */,

@@ -11,7 +11,7 @@ import Foundation
 class ForeCastViewModel {
     
     private(set) var loader = Dynamic(false)
-    private(set) var entity: Dynamic<WeatherEntity?> = Dynamic(nil)
+    private(set) var entity: Dynamic<ForeCastEntity?> = Dynamic(nil)
     private(set) var error: Dynamic<Error?> = Dynamic(nil)
     
     func fetchData() {
@@ -29,7 +29,7 @@ class ForeCastViewModel {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                self.entity.value = try decoder.decode(WeatherEntity.self, from: data)
+                self.entity.value = try decoder.decode(ForeCastEntity.self, from: data)
                 self.loader.value = false
                 print(url)
             }catch {

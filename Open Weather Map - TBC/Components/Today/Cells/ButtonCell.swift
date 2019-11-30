@@ -12,6 +12,11 @@ class ButtonCell: UITableViewCell, AppTableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func configure(with item: AppCellDataProvider) {
         guard let model = item as? ButtonCellDataModel else {
             return

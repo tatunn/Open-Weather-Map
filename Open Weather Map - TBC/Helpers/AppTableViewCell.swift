@@ -21,3 +21,5 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: dataProvider.identifier, for: indexPath) as! AppTableViewCell
     }
 }
+
+typealias AppCellDataProviders = [AppCellDataProvider]

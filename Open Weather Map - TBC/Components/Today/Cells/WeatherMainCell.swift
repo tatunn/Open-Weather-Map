@@ -16,6 +16,11 @@ class WeatherMainCell: UITableViewCell, AppTableViewCell {
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     
     func configure(with item: AppCellDataProvider) {
         guard let model = item as? WeatherMainCellDataModel else {

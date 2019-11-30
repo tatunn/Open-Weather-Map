@@ -14,6 +14,11 @@ class WeatherHeaderCell: UITableViewCell, AppTableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+    
     func configure(with item: AppCellDataProvider) {
         guard let model = item as? WeatherHeaderCellDataModel else {
             return
