@@ -29,11 +29,11 @@ class ForeCastViewModel {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                self.entity.value = try decoder.decode(ForeCastEntity.self, from: data)
-                self.loader.value = false
+                entity.value = try decoder.decode(ForeCastEntity.self, from: data)
+                loader.value = false
                 print(url)
             }catch {
-                self.loader.value = false
+                loader.value = false
                 self.error.value = error
             }
         } else {

@@ -28,7 +28,7 @@ extension UIView {
             loader.widthAnchor.constraint(equalToConstant: 80).isActive = true
             loader.layer.cornerRadius = 4
             loader.layer.masksToBounds = true
-            loader.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+            loader.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
         }
         self.addSubview(loader)
         loader.translatesAutoresizingMaskIntoConstraints = false

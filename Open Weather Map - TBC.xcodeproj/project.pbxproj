@@ -30,6 +30,8 @@
 		E1820E7623923AC8004CDA0C /* ForeCastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7523923AC8004CDA0C /* ForeCastEntity.swift */; };
 		E1820E7823923C7A004CDA0C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7723923C7A004CDA0C /* Date.swift */; };
 		E1820E7A23924A0C004CDA0C /* FireBaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7923924A0C004CDA0C /* FireBaseDB.swift */; };
+		E1820E7E239252D4004CDA0C /* OfflineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1820E7C239252D4004CDA0C /* OfflineViewController.swift */; };
+		E1820E7F239252D4004CDA0C /* OfflineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1820E7D239252D4004CDA0C /* OfflineViewController.xib */; };
 		E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1BA0ACB238CF490009DD241 /* AppDelegate.swift */; };
 		E1BA0AD3238CF490009DD241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD1238CF490009DD241 /* Main.storyboard */; };
 		E1BA0AD5238CF491009DD241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1BA0AD4238CF491009DD241 /* Assets.xcassets */; };
@@ -75,6 +77,8 @@
 		E1820E7523923AC8004CDA0C /* ForeCastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCastEntity.swift; sourceTree = "<group>"; };
 		E1820E7723923C7A004CDA0C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		E1820E7923924A0C004CDA0C /* FireBaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseDB.swift; sourceTree = "<group>"; };
+		E1820E7C239252D4004CDA0C /* OfflineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineViewController.swift; sourceTree = "<group>"; };
+		E1820E7D239252D4004CDA0C /* OfflineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineViewController.xib; sourceTree = "<group>"; };
 		E1BA0AC8238CF490009DD241 /* Open Weather Map - TBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Weather Map - TBC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1BA0ACB238CF490009DD241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1BA0AD2238CF490009DD241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E1820E7B239252B9004CDA0C /* No Internet */ = {
+			isa = PBXGroup;
+			children = (
+				E1820E7C239252D4004CDA0C /* OfflineViewController.swift */,
+				E1820E7D239252D4004CDA0C /* OfflineViewController.xib */,
+			);
+			path = "No Internet";
+			sourceTree = "<group>";
+		};
 		E1BA0ABF238CF490009DD241 = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +247,7 @@
 		E1BA0AE4238CFF45009DD241 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E1820E7B239252B9004CDA0C /* No Internet */,
 				E1820E48238D1D56004CDA0C /* Location Page */,
 				E1BA0B00238D0CDE009DD241 /* Navigation */,
 				E1BA0AF4238D0421009DD241 /* ForeCast */,
@@ -386,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1820E7F239252D4004CDA0C /* OfflineViewController.xib in Resources */,
 				E1820E7223923589004CDA0C /* ForeCastItemCell.xib in Resources */,
 				E1820E4C238D1D81004CDA0C /* LocationPermissionViewController.xib in Resources */,
 				E1BA0AD8238CF491009DD241 /* LaunchScreen.storyboard in Resources */,
@@ -452,6 +467,7 @@
 				E1820E53238D2A81004CDA0C /* Weather.swift in Sources */,
 				E1BA0B02238D0CEE009DD241 /* AppNavigationController.swift in Sources */,
 				E1BA0B06238D124B009DD241 /* RadioAccessTechnology.swift in Sources */,
+				E1820E7E239252D4004CDA0C /* OfflineViewController.swift in Sources */,
 				E1820E7823923C7A004CDA0C /* Date.swift in Sources */,
 				E1BA0ACC238CF490009DD241 /* AppDelegate.swift in Sources */,
 				E1820E68238DAA44004CDA0C /* AppTableViewCell.swift in Sources */,

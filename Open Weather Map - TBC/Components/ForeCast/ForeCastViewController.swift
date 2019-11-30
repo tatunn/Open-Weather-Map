@@ -36,11 +36,12 @@ class ForeCastViewController: UITableViewController {
         
         viewModel.entity.bind { [weak self] in
             self?.setup(with: $0)
-        }
-        
+        }    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.fetchData()
     }
-
     private func setup(with item: ForeCastEntity?) {
         self.title = item?.city?.name
         var result: [ForeCastTableDataSource] = []

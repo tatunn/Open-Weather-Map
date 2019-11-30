@@ -54,7 +54,7 @@ class TodayViewController: UITableViewController {
     
     private func shareDialog() {
         let ac = UIActivityViewController(activityItems: viewModel.getShareCctivityItems(), applicationActivities: nil)
-        present(ac, animated: true)
+        self.present(ac, animated: true)
     }
 }
 
@@ -76,7 +76,9 @@ extension TodayViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if dataProviders[indexPath.row] is ButtonCellDataModel {
-            shareDialog()
+            DispatchQueue.main.async {
+                self.shareDialog()
+            }
         }
     }
 }
