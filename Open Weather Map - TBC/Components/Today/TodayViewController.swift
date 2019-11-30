@@ -51,6 +51,11 @@ class TodayViewController: UITableViewController {
         let button = ButtonCellDataModel(title: "Share")
         dataProviders = [header, main, button]
     }
+    
+    private func shareDialog() {
+        let ac = UIActivityViewController(activityItems: viewModel.getShareCctivityItems(), applicationActivities: nil)
+        present(ac, animated: true)
+    }
 }
 
 extension TodayViewController {
@@ -67,5 +72,11 @@ extension TodayViewController {
         let cell = tableView.dequeueReusable(dataProvider: model, for: indexPath)
         cell.configure(with: model)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if dataProviders[indexPath.row] is ButtonCellDataModel {
+            shareDialog()
+        }
     }
 }

@@ -31,6 +31,7 @@ class TodayViewModel {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 self.entity.value = try decoder.decode(WeatherEntity.self, from: data)
                 self.loader.value = false
+                firebaseSaveData(lat: lat, lon: long)
                 print(url)
             }catch {
                 self.loader.value = false
@@ -41,5 +42,18 @@ class TodayViewModel {
         }
     }
     
+    func getShareCctivityItems() -> [Any] {
+        if let loc = AppDelegate.delegate.appLocationManeger.lastKnownLocation,
+            let url = Methods.weather(lat: loc.latitude, long: loc.longitude).url {
+            return [url]
+        }
+        
+        return [entity.value?.prettyDescr ?? ""]
+    }
+    
+    private func firebaseSaveData(lat: Double, lon: Double) {
+        guard let temp = entity.value?.temp else { return }
+        FireBaseDB.shared.save(location: lat, lon: lon, temp: temp)
+    }
     
 }
