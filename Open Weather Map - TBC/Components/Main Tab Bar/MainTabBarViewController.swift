@@ -16,7 +16,7 @@ class MainTabBarViewController: UITabBarController {
 
         RadioAccessTechnology.shared.delegate = self
         try? RadioAccessTechnology.shared.reachability?.startNotifier()
-        self.didChange(to: RadioAccessTechnology.shared.currentState)
+//        self.didChange(to: RadioAccessTechnology.shared.currentState)
     }
     
     private func setupControllers() {

@@ -14,7 +14,7 @@ extension Date {
         if cal.isDateInToday(self) {
             return "Today"
         }
-        return cal.weekdaySymbols[cal.component(.weekday, from: self)]
+        return cal.weekdaySymbols[cal.component(.weekday, from: self) - 1]
     }
     
     var timeTitle: String {
